@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/p2p-adminweb/p2p-adminweb.iml" filepath="$PROJECT_DIR$/p2p-adminweb/p2p-adminweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-loan.iml" filepath="$PROJECT_DIR$/p2p-loan.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-server/p2p-server.iml" filepath="$PROJECT_DIR$/p2p-server/p2p-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-web/p2p-web.iml" filepath="$PROJECT_DIR$/p2p-web/p2p-web.iml" />
+    </modules>
+  </component>
+</project>
