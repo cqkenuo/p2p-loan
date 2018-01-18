@@ -10,16 +10,23 @@
         <module name="p2p-admin" />
         <module name="p2p-admin-web" />
         <module name="p2p-adminweb" />
+        <module name="p2p-common" />
+        <module name="p2p-domain" />
         <module name="p2p-server" />
-        <module name="p2p-web" />
+        <module name="p2p-service" />
+        <module name="p2p-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="p2p-admin" target="1.5" />
       <module name="p2p-admin-web" target="1.5" />
       <module name="p2p-adminweb" target="1.7" />
+      <module name="p2p-common" target="1.7" />
+      <module name="p2p-domain" target="1.7" />
       <module name="p2p-loan" target="1.7" />
       <module name="p2p-server" target="1.5" />
+      <module name="p2p-service" target="1.7" />
+      <module name="p2p-util" target="1.7" />
       <module name="p2p-web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
