@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/p2p-adminweb/p2p-adminweb.iml" filepath="$PROJECT_DIR$/p2p-adminweb/p2p-adminweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/p2p-dao/p2p-dao.iml" filepath="$PROJECT_DIR$/p2p-dao/p2p-dao.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-domain/p2p-domain.iml" filepath="$PROJECT_DIR$/p2p-domain/p2p-domain.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-loan.iml" filepath="$PROJECT_DIR$/p2p-loan.iml" />
       <module fileurl="file://$PROJECT_DIR$/p2p-service/p2p-service.iml" filepath="$PROJECT_DIR$/p2p-service/p2p-service.iml" />

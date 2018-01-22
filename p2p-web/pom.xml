@@ -10,10 +10,59 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <name>p2p-web</name>
-    <modules>
-        <module>../p2p-domain</module>
-    </modules>
+
     <artifactId>p2p-web</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.vanguard</groupId>
+            <artifactId>p2p-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <!-- springmvc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <!-- jackson springMVC使用的 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <!--freemarker -->
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+        </dependency>
+        <!-- servlet api -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!-- fileupload -->
+        <dependency>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -23,7 +72,7 @@
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <configuration>
                     <path>/</path>
-                    <port>8081</port>
+                    <port>8082</port>
                 </configuration>
             </plugin>
         </plugins>
