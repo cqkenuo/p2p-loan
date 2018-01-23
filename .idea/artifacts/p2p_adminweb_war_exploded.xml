@@ -13,11 +13,11 @@
           <element id="archive" name="p2p-dao-1.0-SNAPSHOT.jar">
             <element id="module-output" name="p2p-dao" />
           </element>
-          <element id="archive" name="p2p-domain-1.0-SNAPSHOT.jar">
-            <element id="module-output" name="p2p-domain" />
-          </element>
           <element id="archive" name="p2p-util-1.0-SNAPSHOT.jar">
             <element id="module-output" name="p2p-util" />
+          </element>
+          <element id="archive" name="p2p-domain-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="p2p-domain" />
           </element>
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.6" />
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.2.3" />
