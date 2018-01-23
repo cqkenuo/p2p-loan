@@ -2,6 +2,7 @@ package com.vanguard.p2p.utils;
 
 import java.math.BigDecimal;
 
+
 public class BidConst {
 	/**
 	 * 显示精度

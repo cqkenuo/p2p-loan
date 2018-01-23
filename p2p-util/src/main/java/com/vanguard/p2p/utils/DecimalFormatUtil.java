@@ -3,11 +3,13 @@ package com.vanguard.p2p.utils;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/**
- * 数字格式化工具类
- * */
+
 public class DecimalFormatUtil {
-	// 金额
+	/**
+	 * 格式化余额
+	 * @param number
+	 * @return
+	 */
 	public static BigDecimal amountFormat(BigDecimal number) {
 		number = number.setScale(BidConst.STORE_SCALE, RoundingMode.HALF_UP);
 		return number;

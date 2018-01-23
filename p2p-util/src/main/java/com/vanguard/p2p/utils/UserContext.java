@@ -1,7 +1,7 @@
 package com.vanguard.p2p.utils;
 
-import com.xmg.p2p.base.domain.Logininfo;
-import com.xmg.p2p.base.vo.VerifyCodeVO;
+import com.vanguard.p2p.base.domain.User;
+import com.vanguard.p2p.base.vo.VerifyCodeVO;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -19,7 +19,7 @@ public class UserContext {
 	 * 将当前用户放入session中
 	 * @param currentUser
 	 */
-	public static void setCurrentUser(Logininfo currentUser){
+	public static void setCurrentUser(User currentUser){
 		getSession().setAttribute(UserContext.USER_IN_SESSION, currentUser);
 	}
 
@@ -29,13 +29,28 @@ public class UserContext {
 	public static void removeCurrentUser() {
 		getSession().removeAttribute(USER_IN_SESSION);
 	}
-	public static Logininfo getCurrentUser(){
-		return (Logininfo) getSession().getAttribute(USER_IN_SESSION);
+
+	/**
+	 * 获得当前session中的用户信息
+	 * @return
+	 */
+	public static User getCurrentUser(){
+		return (User) getSession().getAttribute(USER_IN_SESSION);
 	}
-	//将手机验证码存储到session中
+
+
+	/**
+	 * 将手机验证码存储到session中
+	 * @param vo
+	 */
 	public static void setVerifyCodeVO(VerifyCodeVO vo){
 		getSession().setAttribute(VERIFYCODE_IN_SESSION, vo);
 	}
+
+	/**
+	 * 获得session中的手机验证码
+	 * @return
+	 */
 	public static VerifyCodeVO getVerifyCodeVO() {
 		return (VerifyCodeVO) getSession().getAttribute(VERIFYCODE_IN_SESSION);
 	}
