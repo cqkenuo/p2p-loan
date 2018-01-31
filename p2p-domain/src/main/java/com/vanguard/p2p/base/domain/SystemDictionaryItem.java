@@ -1,6 +1,6 @@
 package com.vanguard.p2p.base.domain;
 
-public class Systemdictionaryitem {
+public class SystemDictionaryItem {
     private Long id;
 
     private Long parentid;

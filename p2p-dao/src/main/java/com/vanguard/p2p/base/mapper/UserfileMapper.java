@@ -2,8 +2,9 @@ package com.vanguard.p2p.base.mapper;
 
 import com.vanguard.p2p.base.domain.UserFile;
 import com.vanguard.p2p.base.domain.UserFileExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserfileMapper {
     int countByExample(UserFileExample example);

@@ -3,14 +3,14 @@ package com.vanguard.p2p.base.domain;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SystemdictionaryExample {
+public class SystemDictionaryItemExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public SystemdictionaryExample() {
+    public SystemDictionaryItemExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -164,73 +164,63 @@ public class SystemdictionaryExample {
             return (Criteria) this;
         }
 
-        public Criteria andSnIsNull() {
-            addCriterion("sn is null");
+        public Criteria andParentidIsNull() {
+            addCriterion("parentId is null");
             return (Criteria) this;
         }
 
-        public Criteria andSnIsNotNull() {
-            addCriterion("sn is not null");
+        public Criteria andParentidIsNotNull() {
+            addCriterion("parentId is not null");
             return (Criteria) this;
         }
 
-        public Criteria andSnEqualTo(String value) {
-            addCriterion("sn =", value, "sn");
+        public Criteria andParentidEqualTo(Long value) {
+            addCriterion("parentId =", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnNotEqualTo(String value) {
-            addCriterion("sn <>", value, "sn");
+        public Criteria andParentidNotEqualTo(Long value) {
+            addCriterion("parentId <>", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnGreaterThan(String value) {
-            addCriterion("sn >", value, "sn");
+        public Criteria andParentidGreaterThan(Long value) {
+            addCriterion("parentId >", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnGreaterThanOrEqualTo(String value) {
-            addCriterion("sn >=", value, "sn");
+        public Criteria andParentidGreaterThanOrEqualTo(Long value) {
+            addCriterion("parentId >=", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnLessThan(String value) {
-            addCriterion("sn <", value, "sn");
+        public Criteria andParentidLessThan(Long value) {
+            addCriterion("parentId <", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnLessThanOrEqualTo(String value) {
-            addCriterion("sn <=", value, "sn");
+        public Criteria andParentidLessThanOrEqualTo(Long value) {
+            addCriterion("parentId <=", value, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnLike(String value) {
-            addCriterion("sn like", value, "sn");
+        public Criteria andParentidIn(List<Long> values) {
+            addCriterion("parentId in", values, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnNotLike(String value) {
-            addCriterion("sn not like", value, "sn");
+        public Criteria andParentidNotIn(List<Long> values) {
+            addCriterion("parentId not in", values, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnIn(List<String> values) {
-            addCriterion("sn in", values, "sn");
+        public Criteria andParentidBetween(Long value1, Long value2) {
+            addCriterion("parentId between", value1, value2, "parentid");
             return (Criteria) this;
         }
 
-        public Criteria andSnNotIn(List<String> values) {
-            addCriterion("sn not in", values, "sn");
-            return (Criteria) this;
-        }
-
-        public Criteria andSnBetween(String value1, String value2) {
-            addCriterion("sn between", value1, value2, "sn");
-            return (Criteria) this;
-        }
-
-        public Criteria andSnNotBetween(String value1, String value2) {
-            addCriterion("sn not between", value1, value2, "sn");
+        public Criteria andParentidNotBetween(Long value1, Long value2) {
+            addCriterion("parentId not between", value1, value2, "parentid");
             return (Criteria) this;
         }
 
@@ -301,6 +291,136 @@ public class SystemdictionaryExample {
 
         public Criteria andTitleNotBetween(String value1, String value2) {
             addCriterion("title not between", value1, value2, "title");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueIsNull() {
+            addCriterion("tvalue is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueIsNotNull() {
+            addCriterion("tvalue is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueEqualTo(String value) {
+            addCriterion("tvalue =", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueNotEqualTo(String value) {
+            addCriterion("tvalue <>", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueGreaterThan(String value) {
+            addCriterion("tvalue >", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueGreaterThanOrEqualTo(String value) {
+            addCriterion("tvalue >=", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueLessThan(String value) {
+            addCriterion("tvalue <", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueLessThanOrEqualTo(String value) {
+            addCriterion("tvalue <=", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueLike(String value) {
+            addCriterion("tvalue like", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueNotLike(String value) {
+            addCriterion("tvalue not like", value, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueIn(List<String> values) {
+            addCriterion("tvalue in", values, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueNotIn(List<String> values) {
+            addCriterion("tvalue not in", values, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueBetween(String value1, String value2) {
+            addCriterion("tvalue between", value1, value2, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andTvalueNotBetween(String value1, String value2) {
+            addCriterion("tvalue not between", value1, value2, "tvalue");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceIsNull() {
+            addCriterion("sequence is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceIsNotNull() {
+            addCriterion("sequence is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceEqualTo(Byte value) {
+            addCriterion("sequence =", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceNotEqualTo(Byte value) {
+            addCriterion("sequence <>", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceGreaterThan(Byte value) {
+            addCriterion("sequence >", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceGreaterThanOrEqualTo(Byte value) {
+            addCriterion("sequence >=", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceLessThan(Byte value) {
+            addCriterion("sequence <", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceLessThanOrEqualTo(Byte value) {
+            addCriterion("sequence <=", value, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceIn(List<Byte> values) {
+            addCriterion("sequence in", values, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceNotIn(List<Byte> values) {
+            addCriterion("sequence not in", values, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceBetween(Byte value1, Byte value2) {
+            addCriterion("sequence between", value1, value2, "sequence");
+            return (Criteria) this;
+        }
+
+        public Criteria andSequenceNotBetween(Byte value1, Byte value2) {
+            addCriterion("sequence not between", value1, value2, "sequence");
             return (Criteria) this;
         }
 

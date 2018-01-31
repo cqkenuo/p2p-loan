@@ -1,30 +1,30 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.Systemdictionaryitem;
-import com.vanguard.p2p.base.domain.SystemdictionaryitemExample;
+import com.vanguard.p2p.base.domain.SystemDictionaryItem;
+import com.vanguard.p2p.base.domain.SystemDictionaryItemExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
 public interface SystemdictionaryitemMapper {
-    int countByExample(SystemdictionaryitemExample example);
+    int countByExample(SystemDictionaryItemExample example);
 
-    int deleteByExample(SystemdictionaryitemExample example);
+    int deleteByExample(SystemDictionaryItemExample example);
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Systemdictionaryitem record);
+    int insert(SystemDictionaryItem record);
 
-    int insertSelective(Systemdictionaryitem record);
+    int insertSelective(SystemDictionaryItem record);
 
-    List<Systemdictionaryitem> selectByExample(SystemdictionaryitemExample example);
+    List<SystemDictionaryItem> selectByExample(SystemDictionaryItemExample example);
 
-    Systemdictionaryitem selectByPrimaryKey(Long id);
+    SystemDictionaryItem selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") Systemdictionaryitem record, @Param("example") SystemdictionaryitemExample example);
+    int updateByExampleSelective(@Param("record") SystemDictionaryItem record, @Param("example") SystemDictionaryItemExample example);
 
-    int updateByExample(@Param("record") Systemdictionaryitem record, @Param("example") SystemdictionaryitemExample example);
+    int updateByExample(@Param("record") SystemDictionaryItem record, @Param("example") SystemDictionaryItemExample example);
 
-    int updateByPrimaryKeySelective(Systemdictionaryitem record);
+    int updateByPrimaryKeySelective(SystemDictionaryItem record);
 
-    int updateByPrimaryKey(Systemdictionaryitem record);
+    int updateByPrimaryKey(SystemDictionaryItem record);
 }

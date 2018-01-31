@@ -1,9 +1,12 @@
 package com.vanguard.p2p.base.domain;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Date;
 
-public class Emailverify {
-    private Long id;
+@Setter@Getter
+public class Emailverify extends BaseDomain {
 
     private String email;
 
@@ -13,43 +16,4 @@ public class Emailverify {
 
     private String uuid;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
-    }
-
-    public Long getUserinfoId() {
-        return userinfoId;
-    }
-
-    public void setUserinfoId(Long userinfoId) {
-        this.userinfoId = userinfoId;
-    }
-
-    public Date getSendtime() {
-        return sendtime;
-    }
-
-    public void setSendtime(Date sendtime) {
-        this.sendtime = sendtime;
-    }
-
-    public String getUuid() {
-        return uuid;
-    }
-
-    public void setUuid(String uuid) {
-        this.uuid = uuid == null ? null : uuid.trim();
-    }
 }
