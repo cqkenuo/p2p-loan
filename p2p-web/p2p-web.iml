@@ -32,8 +32,8 @@
     <orderEntry type="module" module-name="p2p-service" />
     <orderEntry type="module" module-name="p2p-dao" />
     <orderEntry type="module" module-name="p2p-util" />
-    <orderEntry type="module" module-name="p2p-domain" />
     <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.6" level="project" />
+    <orderEntry type="module" module-name="p2p-domain" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis:3.2.3" level="project" />
     <orderEntry type="library" name="Maven: org.mybatis:mybatis-spring:1.2.3" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.21" level="project" />
