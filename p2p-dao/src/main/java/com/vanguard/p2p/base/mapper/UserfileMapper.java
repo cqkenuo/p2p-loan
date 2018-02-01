@@ -6,6 +6,13 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 public interface UserfileMapper {
     int countByExample(UserFileExample example);
 

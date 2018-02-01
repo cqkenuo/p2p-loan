@@ -5,6 +5,13 @@ import lombok.Setter;
 
 import java.util.Date;
 
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 @Setter@Getter
 public class IpLog extends BaseDomain {
 

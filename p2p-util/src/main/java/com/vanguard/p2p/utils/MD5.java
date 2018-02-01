@@ -96,10 +96,11 @@ public class MD5 {
                                     .valueOf(String
                                             .valueOf(m
                                                     .getMD5ofStr("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789")))));
-        } else
+        } else {
             System.out.println(String.valueOf(String.valueOf((new StringBuffer(
                     "MD5(")).append(args[0]).append(")=").append(
                     m.getMD5ofStr(args[0])))));
+        }
     }
 
     private long state[];
@@ -164,9 +165,10 @@ public class MD5 {
         md5Update(inbuf.getBytes(), inbuf.length());
         md5Final();
         digestHexStr = "";
-        for (int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++) {
             digestHexStr = String.valueOf(digestHexStr)
                     + String.valueOf(byteHEX(digest[i]));
+        }
 
         return digestHexStr;
     }
@@ -221,8 +223,9 @@ public class MD5 {
 
     private void md5Memcpy(byte output[], byte input[], int outpos, int inpos,
                            int len) {
-        for (int i = 0; i < len; i++)
+        for (int i = 0; i < len; i++) {
             output[outpos + i] = input[inpos + i];
+        }
 
     }
 
@@ -306,8 +309,9 @@ public class MD5 {
     private void md5Update(byte inbuf[], int inputLen) {
         byte block[] = new byte[64];
         int index = (int) (count[0] >>> 3) & 0x3f;
-        if ((count[0] += inputLen << 3) < (inputLen << 3))
+        if ((count[0] += inputLen << 3) < (inputLen << 3)) {
             count[1]++;
+        }
         count[1] += inputLen >>> 29;
         int partLen = 64 - index;
         int i;
@@ -320,8 +324,9 @@ public class MD5 {
             }
 
             index = 0;
-        } else
+        } else {
             i = 0;
+        }
         md5Memcpy(buffer, inbuf, index, i, inputLen - i);
     }
 }

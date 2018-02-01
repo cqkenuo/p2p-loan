@@ -4,10 +4,11 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 /**
- * 计算器Util
- * 
- * @author Stef
- * 
+ * @Descripe 计算的工具类
+ * @Author vanguard
+ * @Date: 18/1/31
+ * @Version 1.0
+ *
  */
 public class CalculatetUtil {
 

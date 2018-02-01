@@ -5,6 +5,13 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
+/**
+ * @Descripe 账户实体类
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 @Setter@Getter
 public class Account extends BaseDomain {
     private String tradepassword;

@@ -1,13 +1,24 @@
 package com.vanguard.p2p.utils;
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 public class DateUtil {
   private DateUtil(){};
+
+  /**
+   * 获得一天结束的时间
+   * @param date
+   * @return
+   */
   public static Date getEndDate(Date date){
     Calendar c = Calendar.getInstance();
     c.setTime(date);
@@ -16,6 +27,12 @@ public class DateUtil {
     c.set(Calendar.SECOND,59);
     return c.getTime();
   }
+
+  /**
+   * 获得一天开始的时间
+   * @param date
+   * @return
+   */
   public static Date getBeginDate(Date date){
     Calendar c = Calendar.getInstance();
     c.setTime(date);
@@ -24,12 +41,13 @@ public class DateUtil {
     c.set(Calendar.SECOND,0);
     return c.getTime();
   }
-  public static void main(String[] args) {
-    Date beginDate = getBeginDate(new Date());
-    DateFormat format = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
-    System.out.println("beginDate = " + format.format(beginDate));
-  }
-  //获取两个时间之差
+
+  /**
+   * 获取两个时之差
+   * @param current
+   * @param other
+   * @return
+   */
   public static long getBetweenTime(Date current,Date other){
 	  return Math.abs((current.getTime() - other.getTime())/1000);
   }

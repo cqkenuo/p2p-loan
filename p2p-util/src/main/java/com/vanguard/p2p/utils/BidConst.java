@@ -3,6 +3,13 @@ package com.vanguard.p2p.utils;
 import java.math.BigDecimal;
 
 
+/**
+ * @Descripe 系统的常量
+ * @Author vanguard
+ * @Date: 18/1/31
+ * @Version 1.0
+ *
+ */
 public class BidConst {
 	/**
 	 * 显示精度

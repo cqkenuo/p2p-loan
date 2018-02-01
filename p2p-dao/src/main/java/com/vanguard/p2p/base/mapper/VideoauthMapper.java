@@ -2,9 +2,17 @@ package com.vanguard.p2p.base.mapper;
 
 import com.vanguard.p2p.base.domain.VideoAuth;
 import com.vanguard.p2p.base.domain.VideoAuthExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 public interface VideoauthMapper {
     int countByExample(VideoAuthExample example);
 

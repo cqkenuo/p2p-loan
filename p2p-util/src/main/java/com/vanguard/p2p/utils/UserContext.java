@@ -7,6 +7,13 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 public class UserContext {
 	public static final String USER_IN_SESSION = "logininfo";//freemark从session取值
 	public static final String VERIFYCODE_IN_SESSION = "code";//freemark从session取值

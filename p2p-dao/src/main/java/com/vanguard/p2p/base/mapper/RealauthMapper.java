@@ -2,9 +2,17 @@ package com.vanguard.p2p.base.mapper;
 
 import com.vanguard.p2p.base.domain.RealAuth;
 import com.vanguard.p2p.base.domain.RealAuthExample;
-import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
+/**
+ * @Descripe
+ * @Author vanguard
+ * @Date: 2018/01/31
+ * @Version 1.0
+ *
+ */
 public interface RealauthMapper {
     int countByExample(RealAuthExample example);
 
