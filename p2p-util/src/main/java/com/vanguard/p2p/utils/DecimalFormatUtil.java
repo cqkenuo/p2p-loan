@@ -3,7 +3,13 @@ package com.vanguard.p2p.utils;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-
+/**
+ * @descripe
+ * @author vanguard
+ * @date: 2018/02/05
+ * @version 1.0
+ *
+ */
 public class DecimalFormatUtil {
 	/**
 	 * 格式化余额显示
@@ -43,8 +49,9 @@ public class DecimalFormatUtil {
 
 
 	public static BigDecimal formatBigDecimal(BigDecimal data, int scal) {
-		if (null == data)
+		if (null == data) {
 			return new BigDecimal(0.00);
+		}
 		return data.setScale(scal, BigDecimal.ROUND_HALF_UP);
 	}
 }

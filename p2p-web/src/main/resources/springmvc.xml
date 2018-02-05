@@ -27,6 +27,7 @@
 	<!-- 资源映射 -->
 	<mvc:resources location="/js/" mapping="/js/**"/>
 	<mvc:resources location="/css/" mapping="/css/**"/>
+	<mvc:resources location="/images/" mapping="/images/**"/>
 	
 	<!-- 定义文件上传解析器 -->
 	<bean id="multipartResolver"

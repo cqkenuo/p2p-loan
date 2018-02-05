@@ -6,14 +6,38 @@ package com.vanguard.p2p.utils;
  * @author Administrator
  */
 public class BitStatesUtils {
-	public final static Long OP_BIND_PHONE = 1L << 0; // 用户绑定手机状态码
-	public final static Long OP_BIND_EMAIL = 1L << 1; // 用户绑定邮箱
-	public final static Long OP_BASIC_INFO = 1L << 2;// 用户是否填写基本资料
-	public final static Long OP_REAL_AUTH = 1L << 3;// 用户是否实名认证
-	public final static Long OP_VIDEO_AUTH = 1L << 4;// 用户是否视频认证
-	public final static Long OP_HAS_BIDREQUEST_PROCESS = 1L << 5;// 用户是否有一个借款正在处理流程当中
-	public final static Long OP_BIND_BANKCARD = 1L << 6;// 用户是否绑定了银行卡
-	public final static Long OP_MOENY_WITHDRAW_PROCESS = 1L << 7;// 用户有在申请中的提现
+	/**
+	 * 用户绑定手机状态码
+	 */
+	public final static Long OP_BIND_PHONE = 1L << 0;
+	/**
+	 * 用户绑定邮箱
+	 */
+	public final static Long OP_BIND_EMAIL = 1L << 1;
+	/**
+	 * 用户是否填写基本资料
+	 */
+	public final static Long OP_BASE_INFO = 1L << 2;
+	/**
+	 * 用户是否实名认证
+	 */
+	public final static Long OP_REAL_AUTH = 1L << 3;
+	/**
+	 * 用户是否视频认证
+	 */
+	public final static Long OP_VIDEO_AUTH = 1L << 4;
+	/**
+	 * 用户是否有一个借款正在处理流程当中
+	 */
+	public final static Long OP_HAS_BIDREQUEST_PROCESS = 1L << 5;
+	/**
+	 * 用户是否绑定了银行卡
+	 */
+	public final static Long OP_BIND_BANKCARD = 1L << 6;
+	/**
+	 *  用户有在申请中的提现
+	 */
+	public final static Long OP_MOENY_WITHDRAW_PROCESS = 1L << 7;
 	
 	/**
 	 * @param states

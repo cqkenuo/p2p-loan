@@ -1,63 +1,36 @@
 package com.vanguard.p2p.base.domain;
 
-public class SystemDictionaryItem {
-    private Long id;
+import lombok.Getter;
+import lombok.Setter;
 
+/**
+ * @descripe 数据字典项实体类
+ * @author vanguard
+ * @date: 2018/02/05
+ * @version 1.0
+ *
+ */
+@Setter@Getter
+public class SystemDictionaryItem extends BaseDomain {
+    /**
+     * 系统目录
+     */
     private Long parentid;
-
+    /**
+     * 名称
+     */
     private String title;
-
+    /**
+     * 值
+     */
     private String tvalue;
-
+    /**
+     * 序列
+     */
     private Byte sequence;
-
+    /**
+     * 说明
+     */
     private String intro;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getParentid() {
-        return parentid;
-    }
-
-    public void setParentid(Long parentid) {
-        this.parentid = parentid;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title == null ? null : title.trim();
-    }
-
-    public String getTvalue() {
-        return tvalue;
-    }
-
-    public void setTvalue(String tvalue) {
-        this.tvalue = tvalue == null ? null : tvalue.trim();
-    }
-
-    public Byte getSequence() {
-        return sequence;
-    }
-
-    public void setSequence(Byte sequence) {
-        this.sequence = sequence;
-    }
-
-    public String getIntro() {
-        return intro;
-    }
-
-    public void setIntro(String intro) {
-        this.intro = intro == null ? null : intro.trim();
-    }
 }

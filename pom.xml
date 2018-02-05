@@ -30,7 +30,6 @@
         <freemarker.version>2.3.23</freemarker.version>
         <mail.version>1.4.4</mail.version>
         <jstl.version>1.2</jstl.version>
-        <jstl.version>1.2</jstl.version>
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.0</jsp-api.version>
         <jackson.version>2.5.0</jackson.version>
@@ -227,6 +226,17 @@
                 <artifactId>servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
                 <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jsp-api</artifactId>
+                <version>${jsp-api.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>${jstl.version}</version>
             </dependency>
             <!-- fastjson -->
             <dependency>

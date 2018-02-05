@@ -3,6 +3,8 @@ package com.vanguard.p2p.base.domain;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+
 /**
  * @Descripe
  * @Author vanguard
@@ -11,6 +13,9 @@ import lombok.Setter;
  *
  */
 @Setter@Getter
-public class BaseDomain {
+public class BaseDomain implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private Long id;
 }
