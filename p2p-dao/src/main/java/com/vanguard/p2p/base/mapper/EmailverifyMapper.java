@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.Emailverify;
-import com.vanguard.p2p.base.domain.EmailverifyExample;
+import com.vanguard.p2p.business.domain.EmailActive;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -20,19 +19,19 @@ public interface EmailverifyMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(Emailverify record);
+    int insert(EmailActive record);
 
-    int insertSelective(Emailverify record);
+    int insertSelective(EmailActive record);
 
-    List<Emailverify> selectByExample(EmailverifyExample example);
+    List<EmailActive> selectByExample(EmailverifyExample example);
 
-    Emailverify selectByPrimaryKey(Long id);
+    EmailActive selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") Emailverify record, @Param("example") EmailverifyExample example);
+    int updateByExampleSelective(@Param("record") EmailActive record, @Param("example") EmailverifyExample example);
 
-    int updateByExample(@Param("record") Emailverify record, @Param("example") EmailverifyExample example);
+    int updateByExample(@Param("record") EmailActive record, @Param("example") EmailverifyExample example);
 
-    int updateByPrimaryKeySelective(Emailverify record);
+    int updateByPrimaryKeySelective(EmailActive record);
 
-    int updateByPrimaryKey(Emailverify record);
+    int updateByPrimaryKey(EmailActive record);
 }

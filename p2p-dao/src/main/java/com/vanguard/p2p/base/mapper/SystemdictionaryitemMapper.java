@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
 import com.vanguard.p2p.base.domain.SystemDictionaryItem;
-import com.vanguard.p2p.base.domain.SystemDictionaryItemExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

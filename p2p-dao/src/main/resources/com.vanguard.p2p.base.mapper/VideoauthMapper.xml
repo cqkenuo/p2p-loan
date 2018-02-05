@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.vanguard.p2p.base.mapper.VideoauthMapper" >
-  <resultMap id="BaseResultMap" type="com.vanguard.p2p.base.domain.VideoAuth" >
+  <resultMap id="BaseResultMap" type="com.vanguard.p2p.business.domain.VideoAuth" >
     <id column="id" property="id" jdbcType="BIGINT" />
     <result column="state" property="state" jdbcType="TINYINT" />
     <result column="remark" property="remark" jdbcType="VARCHAR" />
@@ -101,7 +101,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.vanguard.p2p.base.domain.VideoAuth" >
+  <insert id="insert" parameterType="com.vanguard.p2p.business.domain.VideoAuth" >
     insert into videoauth (id, state, remark, 
       auditTime, applyTime, auditor_id, 
       applier_id)
@@ -109,7 +109,7 @@
       #{audittime,jdbcType=TIMESTAMP}, #{applytime,jdbcType=TIMESTAMP}, #{auditorId,jdbcType=BIGINT}, 
       #{applierId,jdbcType=BIGINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.vanguard.p2p.base.domain.VideoAuth" >
+  <insert id="insertSelective" parameterType="com.vanguard.p2p.business.domain.VideoAuth" >
     insert into videoauth
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
@@ -206,7 +206,7 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.vanguard.p2p.base.domain.VideoAuth" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.vanguard.p2p.business.domain.VideoAuth" >
     update videoauth
     <set >
       <if test="state != null" >
@@ -230,7 +230,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.vanguard.p2p.base.domain.VideoAuth" >
+  <update id="updateByPrimaryKey" parameterType="com.vanguard.p2p.business.domain.VideoAuth" >
     update videoauth
     set state = #{state,jdbcType=TINYINT},
       remark = #{remark,jdbcType=VARCHAR},

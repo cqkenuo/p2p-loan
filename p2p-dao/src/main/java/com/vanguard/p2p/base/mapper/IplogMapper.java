@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.IpLog;
-import com.vanguard.p2p.base.domain.IplogExample;
+import com.vanguard.p2p.base.domain.LoginLog;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -14,25 +13,25 @@ import java.util.List;
  *
  */
 public interface IplogMapper {
-    int countByExample(IplogExample example);
+    int countByExample(LoginLogExample example);
 
-    int deleteByExample(IplogExample example);
+    int deleteByExample(LoginLogExample example);
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(IpLog record);
+    int insert(LoginLog record);
 
-    int insertSelective(IpLog record);
+    int insertSelective(LoginLog record);
 
-    List<IpLog> selectByExample(IplogExample example);
+    List<LoginLog> selectByExample(LoginLogExample example);
 
-    IpLog selectByPrimaryKey(Long id);
+    LoginLog selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") IpLog record, @Param("example") IplogExample example);
+    int updateByExampleSelective(@Param("record") LoginLog record, @Param("example") LoginLogExample example);
 
-    int updateByExample(@Param("record") IpLog record, @Param("example") IplogExample example);
+    int updateByExample(@Param("record") LoginLog record, @Param("example") LoginLogExample example);
 
-    int updateByPrimaryKeySelective(IpLog record);
+    int updateByPrimaryKeySelective(LoginLog record);
 
-    int updateByPrimaryKey(IpLog record);
+    int updateByPrimaryKey(LoginLog record);
 }

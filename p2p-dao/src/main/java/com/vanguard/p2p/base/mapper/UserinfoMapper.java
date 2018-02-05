@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.UserInfo;
-import com.vanguard.p2p.base.domain.UserInfoExample;
+import com.vanguard.p2p.business.domain.BaseInformation;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -20,19 +19,19 @@ public interface UserinfoMapper {
 
     int deleteByPrimaryKey(Long id);
 
-    int insert(UserInfo record);
+    int insert(BaseInformation record);
 
-    int insertSelective(UserInfo record);
+    int insertSelective(BaseInformation record);
 
-    List<UserInfo> selectByExample(UserInfoExample example);
+    List<BaseInformation> selectByExample(UserInfoExample example);
 
-    UserInfo selectByPrimaryKey(Long id);
+    BaseInformation selectByPrimaryKey(Long id);
 
-    int updateByExampleSelective(@Param("record") UserInfo record, @Param("example") UserInfoExample example);
+    int updateByExampleSelective(@Param("record") BaseInformation record, @Param("example") UserInfoExample example);
 
-    int updateByExample(@Param("record") UserInfo record, @Param("example") UserInfoExample example);
+    int updateByExample(@Param("record") BaseInformation record, @Param("example") UserInfoExample example);
 
-    int updateByPrimaryKeySelective(UserInfo record);
+    int updateByPrimaryKeySelective(BaseInformation record);
 
-    int updateByPrimaryKey(UserInfo record);
+    int updateByPrimaryKey(BaseInformation record);
 }

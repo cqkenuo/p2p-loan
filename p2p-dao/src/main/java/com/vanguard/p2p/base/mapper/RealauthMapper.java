@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.RealAuth;
-import com.vanguard.p2p.base.domain.RealAuthExample;
+import com.vanguard.p2p.business.domain.RealAuth;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

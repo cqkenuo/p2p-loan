@@ -1,7 +1,6 @@
 package com.vanguard.p2p.base.mapper;
 
-import com.vanguard.p2p.base.domain.Account;
-import com.vanguard.p2p.base.domain.AccountExample;
+import com.vanguard.p2p.business.domain.Account;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
