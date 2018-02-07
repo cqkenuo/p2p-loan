@@ -9,33 +9,33 @@ import lombok.Setter;
  * @Author vanguard
  * @Date: 2018/02/01
  * @Version 1.0
- *
  */
-@Getter@Setter
+@Getter
+@Setter
 public class BidRequestAuditHistory extends BaseAuditDomain {
 
-	/**
-	 * 审核的标ID
-	 */
-	private Long bidRequestId;
-	/**
-	 * 审核的类型
-	 * 0=发标前审核
-	 * 1=满标一审
-	 * 2=满标二审
-	 */
-	private Integer auditType;
+    /**
+     * 审核的标ID
+     */
+    private Long bidRequestId;
+    /**
+     * 审核的类型
+     * 0=发标前审核
+     * 1=满标一审
+     * 2=满标二审
+     */
+    private Integer auditType;
 
-	public String getAuditTypeDisplay(){
-		switch (this.auditType) {
-		case 0:
-			return "发标前审核";
-		case 1:
-			return "满标一审";
-		case 2:
-			return "满标二审";
-		default:
-			return "";
-		}
-	}
+    public String getAuditTypeDisplay() {
+        switch (this.auditType) {
+            case 0:
+                return "发标前审核";
+            case 1:
+                return "满标一审";
+            case 2:
+                return "满标二审";
+            default:
+                return "";
+        }
+    }
 }

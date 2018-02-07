@@ -1,5 +1,6 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -24,7 +25,7 @@ public class Role extends BaseDomain {
 	 */
 	private String roleSign;
 	/**
-	 * 系统数据 1=是,只有超级管理员能修改/0=否,拥有角色修改人员的权限能都修改
+	 * 系统数据 1=是,只有超级管理员能修改/0=否,`
 	 */
 	private Integer isSystem;
 	/**

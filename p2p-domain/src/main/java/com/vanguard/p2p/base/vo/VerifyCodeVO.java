@@ -4,6 +4,12 @@ import lombok.Getter;
 
 import java.util.Date;
 
+/**
+ * @author vanguard
+ * @version 1.0
+ * @descripe 手机验证码
+ * @date: 2018-02-07
+ */
 @Getter
 public class VerifyCodeVO {
 	private String code;

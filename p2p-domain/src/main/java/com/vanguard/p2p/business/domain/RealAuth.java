@@ -5,20 +5,25 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @descripe 实名认证实体类
  * @author vanguard
- * @date: 2018/02/05
  * @version 1.0
- *
+ * @descripe 实名认证实体类
+ * @date: 2018/02/05
  */
-@Setter@Getter
+@Setter
+@Getter
 public class RealAuth extends BaseAuditDomain {
+    /**
+     * 会员用户ID
+     */
+    private Long memId;
+
     /**
      * 真实姓名
      */
     private String realname;
     /**
-     * 性别 0=男/1=女
+     * 性别 0=女/1=男
      */
     private Integer sex;
     /**
@@ -33,8 +38,6 @@ public class RealAuth extends BaseAuditDomain {
      * 证件住址
      */
     private String address;
-
-    private Byte state;
     /**
      * 身份证正面照片
      */
@@ -44,8 +47,12 @@ public class RealAuth extends BaseAuditDomain {
      */
     private String image2;
 
+    /**
+     * 获得性别
+     * @return
+     */
     public String getSex() {
-        return sex == 0 ? "男" : "女";
+        return sex == 1 ? "男" : "女";
     }
 
 }

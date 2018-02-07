@@ -1,6 +1,6 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.util.StringUtils;
@@ -16,11 +16,16 @@ import org.springframework.util.StringUtils;
 public class UserBankInfo extends BaseDomain {
 
 	/**
+	 * 会员用户ID
+	 */
+	private Long memId;
+
+	/**
 	 * 银行名称
 	 */
 	private String bankName;
 	/**
-	 * 开发人姓名
+	 * 开户人姓名
 	 */
 	private String accountName;
 	/**

@@ -1,6 +1,6 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,16 +21,16 @@ public class EmailActive extends BaseDomain {
      */
     private String email;
     /**
-     * 用户ID
+     * 会员用户ID
      */
-    private Long userId;
+    private Long memId;
     /**
      * 发送时间
      */
     private Date sendTime;
     /**
-     * 发送的激活url的uuid
+     * 发送的激活url的验证码
      */
-    private String uuid;
+    private String captcha;
 
 }

@@ -1,7 +1,7 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
-import com.vanguard.p2p.utils.BidConst;
+import com.vanguard.p2p.base.BaseDomain;
+import com.vanguard.p2p.constant.BidConst;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -25,7 +25,7 @@ public class PaymentSchedule extends BaseDomain {
 	 */
 	private Long bidRequestId;
 	/**
-	 * 借款名称
+	 * 借款标题
 	 */
 	private String bidRequestTitle;
 	/**

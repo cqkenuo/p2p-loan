@@ -1,5 +1,7 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
+
 import java.util.Date;
 
 /**

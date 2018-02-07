@@ -1,4 +1,4 @@
-package com.vanguard.p2p.utils;
+package com.vanguard.p2p.enums;
 
 import lombok.Getter;
 

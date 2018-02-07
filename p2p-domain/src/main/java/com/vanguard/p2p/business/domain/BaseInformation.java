@@ -1,6 +1,6 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
+import com.vanguard.p2p.base.BaseDomain;
 import com.vanguard.p2p.base.domain.SystemDictionaryItem;
 import com.vanguard.p2p.utils.BitStatesUtils;
 import lombok.Getter;
@@ -12,15 +12,15 @@ import org.springframework.util.StringUtils;
  * @Author vanguard
  * @Date: 2018/02/05
  * @Version 1.0
- *
  */
-@Setter@Getter
+@Setter
+@Getter
 public class BaseInformation extends BaseDomain {
 
     /**
      * 用户会员ID
      */
-    private Integer memberId;
+    private Integer memId;
     /**
      * 版本号
      */
@@ -33,6 +33,10 @@ public class BaseInformation extends BaseDomain {
      * 真实姓名
      */
     private String realName;
+    /**
+     * 性别 0=女/1=男
+     */
+    private Integer sex;
     /**
      * 身份证号
      */
@@ -74,16 +78,17 @@ public class BaseInformation extends BaseDomain {
     /**
      * 学历
      */
-    private SystemDictionaryItem educationBackground;
+    private SystemDictionaryItem education;
     /**
      * 住房条件
      */
     private SystemDictionaryItem houseCondition;
 
     /**
-     * 获得一个只有ID的UserInfo对象
+     * 获得一个只有ID的BaseInformation对象
+     *
      * @param id 用户Id
-     * @return UserInfo对象
+     * @return BaseInformation对象
      */
     public static BaseInformation empty(Long id) {
         BaseInformation userinfo = new BaseInformation();
@@ -94,6 +99,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 添加位状态
+     *
      * @param state 位状态
      */
     public void addState(Long state) {
@@ -102,6 +108,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 移除位状态
+     *
      * @param state 位状态
      */
     public void removeState(Long state) {
@@ -110,6 +117,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 判断是否绑定手机号
+     *
      * @return false=否/true=是
      */
     public boolean getIsBindPhone() {
@@ -118,6 +126,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 判断是否绑定邮箱
+     *
      * @return false=否/true=是
      */
     public boolean getIsBindEmail() {
@@ -126,6 +135,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 判断用户是否添加基本资料
+     *
      * @return false=否/true=是
      */
     public boolean getBaseInfo() {
@@ -134,6 +144,7 @@ public class BaseInformation extends BaseDomain {
 
     /**
      * 判断用户是否实名认证
+     *
      * @return false=否/true=是
      */
     public boolean getRealAuth() {
@@ -144,7 +155,7 @@ public class BaseInformation extends BaseDomain {
         return BitStatesUtils.hasState(bitState, BitStatesUtils.OP_VIDEO_AUTH);
     }
 
-    public boolean getHasBidRequest(){
+    public boolean getHasBidRequest() {
         return BitStatesUtils.hasState(bitState, BitStatesUtils.OP_HAS_BIDREQUEST_PROCESS);
     }
 

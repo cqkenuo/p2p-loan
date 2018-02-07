@@ -1,5 +1,7 @@
 package com.vanguard.p2p.utils;
 
+import com.vanguard.p2p.constant.BidConst;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 

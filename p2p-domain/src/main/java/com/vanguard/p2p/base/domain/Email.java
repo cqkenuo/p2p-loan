@@ -1,5 +1,6 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 

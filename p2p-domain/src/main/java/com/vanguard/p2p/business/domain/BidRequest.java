@@ -1,8 +1,10 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
-import com.vanguard.p2p.utils.BidConst;
+import com.vanguard.p2p.base.BaseDomain;
+import com.vanguard.p2p.constant.BidConst;
 import com.vanguard.p2p.utils.CalculatetUtil;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -11,12 +13,13 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * @descripe 借款标的实体类
  * @author vanguard
- * @date: 2018/02/05
  * @version 1.0
- *
+ * @descripe 借款标的实体类
+ * @date: 2018/02/05
  */
+@Setter
+@Getter
 public class BidRequest extends BaseDomain {
     /**
      * 版本
@@ -75,7 +78,7 @@ public class BidRequest extends BaseDomain {
      */
     private String note = "";
     /**
-     * 招标到期时间 (页面数据是招标天数，无效日期=招标天数+当前日期)
+     * 招标截止日期 (页面数据是招标天数，无效日期=招标天数+当前日期)
      */
     private Date disableDate = new Date();
     /**
@@ -140,17 +143,19 @@ public class BidRequest extends BaseDomain {
 
     /**
      * 计算当前借款标剩余的钱
+     *
      * @return
      */
-    public BigDecimal getRemainAmount(){
+    public BigDecimal getRemainAmount() {
         return this.bidRequestAmount.subtract(this.currentSum);
     }
 
     /**
      * 计算当前招标金额的百分比
+     *
      * @return
      */
-    public int getPercent(){
+    public int getPercent() {
         return this.currentSum.divide(this.bidRequestAmount, 2, RoundingMode.HALF_UP).multiply(CalculatetUtil.ONE_HUNDRED).intValue();
     }
 

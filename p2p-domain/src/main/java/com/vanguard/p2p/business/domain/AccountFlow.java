@@ -1,6 +1,6 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,7 +16,6 @@ import java.util.Date;
  */
 @Getter@Setter
 public class AccountFlow extends BaseDomain {
-	
 	/**
 	 * 流水发生的账户
 	 */

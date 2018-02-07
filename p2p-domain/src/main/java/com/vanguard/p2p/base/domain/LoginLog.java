@@ -1,5 +1,6 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,26 +20,18 @@ public class LoginLog extends BaseDomain {
      * 用户登录IP
      */
     private String userIp;
-
-    /**
-     * 用户登录状态 0=失败/1=成功
-     */
-    private Byte state;
-    /**
-     * 用户名
-     */
-    private String username;
-    /**
-     * 用户ID
-     */
-    private Long userId;
-    /**
-     *用户状态
-     */
-    private Byte usertype;
     /**
      * 登录时间
      */
     private Date loginTime;
+    /**
+     * 用户登录状态 0=失败/1=成功
+     */
+    private Integer userStatus;
+    /**
+     * 用户名
+     */
+    private String username;
+
 
 }

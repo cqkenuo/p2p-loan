@@ -1,8 +1,7 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
-import com.vanguard.p2p.base.domain.User;
-import com.vanguard.p2p.utils.BidConst;
+import com.vanguard.p2p.base.BaseDomain;
+import com.vanguard.p2p.constant.BidConst;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -38,7 +37,7 @@ public class Bid extends BaseDomain {
 	/**
 	 * 投标人id(User)
 	 */
-	private User bidUser;
+	private Member bidUser;
 	/**
 	 * 投标时间
 	 */

@@ -1,5 +1,6 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,11 +11,15 @@ import java.util.Date;
  * @Author vanguard
  * @Date: 2018/02/05
  * @Version 1.0
- *
  */
-@Setter@Getter
+@Setter
+@Getter
 public class User extends BaseDomain {
 
+    /**
+     * 用户名
+     */
+    private String userName;
     /**
      * 管理员密码
      */
@@ -23,16 +28,13 @@ public class User extends BaseDomain {
      * 加密密码的盐
      */
     private String salt;
-    /**
-     * 用户名
-     */
-    private String userName;
+
     /**
      * 真实姓名
      */
     private String realName;
     /**
-     * 性别 0=保密/1=男/2=女
+     * 性别 0=女/1=男
      */
     private Integer sex;
     /**
@@ -79,5 +81,17 @@ public class User extends BaseDomain {
      * 更新者
      */
     private String updateBy;
+
+    /**
+     * 判断用户的状态
+     * @return false=冻结/true=正常
+     */
+    public boolean getStatus() {
+        return status == 0 ? false : true;
+    }
+
+    public String getSex() {
+        return sex == 0 ? "女" : "男";
+    }
 
 }

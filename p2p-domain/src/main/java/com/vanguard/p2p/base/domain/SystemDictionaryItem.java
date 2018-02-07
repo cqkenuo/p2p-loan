@@ -1,16 +1,17 @@
 package com.vanguard.p2p.base.domain;
 
+import com.vanguard.p2p.base.BaseDomain;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @descripe 数据字典项实体类
  * @author vanguard
- * @date: 2018/02/05
  * @version 1.0
- *
+ * @descripe 数据字典项实体类
+ * @date: 2018/02/05
  */
-@Setter@Getter
+@Setter
+@Getter
 public class SystemDictionaryItem extends BaseDomain {
     /**
      * 系统目录

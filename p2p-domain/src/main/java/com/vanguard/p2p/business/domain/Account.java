@@ -1,7 +1,7 @@
 package com.vanguard.p2p.business.domain;
 
-import com.vanguard.p2p.base.domain.BaseDomain;
-import com.vanguard.p2p.utils.BidConst;
+import com.vanguard.p2p.base.BaseDomain;
+import com.vanguard.p2p.constant.BidConst;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +16,10 @@ import java.math.BigDecimal;
  */
 @Setter@Getter
 public class Account extends BaseDomain {
+    /**
+     * 会员用户ID
+     */
+    private Long memId;
     /**
      * 版本
      */
