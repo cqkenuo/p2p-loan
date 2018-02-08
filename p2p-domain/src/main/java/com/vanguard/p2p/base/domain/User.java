@@ -82,14 +82,6 @@ public class User extends BaseDomain {
      */
     private String updateBy;
 
-    /**
-     * 判断用户的状态
-     * @return false=冻结/true=正常
-     */
-    public boolean getStatus() {
-        return status == 0 ? false : true;
-    }
-
     public String getSex() {
         return sex == 0 ? "女" : "男";
     }

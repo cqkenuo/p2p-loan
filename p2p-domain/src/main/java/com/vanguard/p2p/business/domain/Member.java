@@ -1,6 +1,8 @@
 package com.vanguard.p2p.business.domain;
 
 import com.vanguard.p2p.base.BaseDomain;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
@@ -10,6 +12,8 @@ import java.util.Date;
  * @describe 用户实体类
  * @date 18/2/5
  */
+@Setter
+@Getter
 public class Member extends BaseDomain {
     /**
      * 用户名
@@ -35,4 +39,5 @@ public class Member extends BaseDomain {
      * 更新时间
      */
     private Date updateTime;
+
 }

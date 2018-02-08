@@ -25,6 +25,7 @@
         <mybatis.version>3.2.3</mybatis.version>
         <mybatis.spring.version>1.2.3</mybatis.spring.version>
         <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
+        <pagehelper.version>3.4.2-fix</pagehelper.version>
         <mysql.version>5.1.21</mysql.version>
         <druid.version>1.0.14</druid.version>
         <freemarker.version>2.3.23</freemarker.version>
@@ -33,10 +34,13 @@
         <servlet-api.version>2.5</servlet-api.version>
         <jsp-api.version>2.0</jsp-api.version>
         <jackson.version>2.5.0</jackson.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
         <commons-lang3.version>3.3.2</commons-lang3.version>
         <commons-lang.version>2.6</commons-lang.version>
         <commons-io.version>1.3.2</commons-io.version>
         <commons-net.version>3.3</commons-net.version>
+        <commons-codec.version>1.10</commons-codec.version>
+        <bcprov-jdk15on.version>1.56</bcprov-jdk15on.version>
         <lombok.version>1.16.6</lombok.version>
         <slf4j-api.version>1.7.6</slf4j-api.version>
         <slf4j-log4j12>1.7.6</slf4j-log4j12>
@@ -50,7 +54,7 @@
     </properties>
     <dependencyManagement>
         <dependencies>
-            <!-- lombok -->
+            <!-- lombok相关依赖  -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
@@ -61,7 +65,8 @@
                 <artifactId>commons-lang</artifactId>
                 <version>${commons-lang.version}</version>
             </dependency>
-            <!-- 日志 -->
+
+            <!-- log日志相关依赖 -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -78,10 +83,10 @@
                 <version>${log4j.version}</version>
             </dependency>
 
-            <!-- mybatis -->
+            <!-- MYBATIS 持久层框架 begin√ -->
             <dependency>
                 <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
+                <artifactId>mybatis</artifactId>		  <!-- mybatis持久层框架 -->
                 <version>${mybatis.version}</version>
             </dependency>
             <dependency>
@@ -89,38 +94,48 @@
                 <artifactId>mybatis-spring</artifactId>
                 <version>${mybatis.spring.version}</version>
             </dependency>
-            <!--mysql -->
+            <dependency>
+                <groupId>com.github.miemiedev</groupId>
+                <artifactId>mybatis-paginator</artifactId>
+                <version>${mybatis.paginator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <!-- MYBATIS 持久层框架 end -->
+
+            <!-- MYSQL 数据库相关依赖 begin -->
             <dependency>
                 <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
+                <artifactId>mysql-connector-java</artifactId><!-- 导入Mysql数据库驱动包 -->
                 <version>${mysql.version}</version>
             </dependency>
-            <!-- 连接池 -->
             <dependency>
                 <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
+                <artifactId>druid</artifactId>              <!-- connection pool:数据库连接池,用来在spingMVC-mybatis.xml中配置数据库 -->
                 <version>${druid.version}</version>
             </dependency>
-            <!-- junit单元测试 -->
+            <!-- MYSQL 数据库相关依赖 end -->
+
+            <!-- TEST:单元测试框架 begin√ -->
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
                 <scope>test</scope>
             </dependency>
+            <!-- TEST end -->
+
             <!-- Apache工具组件 -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>${commons-lang3.version}</version>
-            </dependency>
             <dependency>
                 <groupId>commons-net</groupId>
                 <artifactId>commons-net</artifactId>
                 <version>${commons-net.version}</version>
             </dependency>
 
-            <!-- 2.SPRING相关依赖 begin√ -->
+            <!-- SPRING相关依赖 begin√ -->
             <!-- ①.spring核心依赖 -->
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -191,7 +206,7 @@
             </dependency>
             <!-- SPRING相关依赖 end -->
 
-            <!-- 3.SERVLET WEB begin√ -->
+            <!-- SERVLET WEB begin√ -->
             <dependency>
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
@@ -202,7 +217,6 @@
                 <artifactId>freemarker</artifactId>
                 <version>${freemarker.version}</version>
             </dependency>
-            <!-- servlet api -->
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>servlet-api</artifactId>
@@ -258,12 +272,6 @@
                 <artifactId>aspectjweaver</artifactId>
                 <version>1.7.4</version>
             </dependency>
-            <!-- cglib -->
-            <dependency>
-                <groupId>cglib</groupId>
-                <artifactId>cglib</artifactId>
-                <version>3.1</version>
-            </dependency>
 
             <!-- 上传组件包 -->
             <dependency>
@@ -276,7 +284,7 @@
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
             </dependency>
-            <!-- 7.安全框架SECURITY:shiro begin -->
+            <!-- 安全框架SECURITY:shiro begin -->
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-core</artifactId>
@@ -306,7 +314,7 @@
             </dependency>
             <!-- 安全框架SECURITY:shiro end -->
 
-            <!-- 8.缓存框架EHCACHE:ehcache begin -->
+            <!-- 缓存框架EHCACHE:ehcache begin -->
             <dependency>
                 <groupId>org.ehcache</groupId>
                 <artifactId>ehcache</artifactId>
@@ -326,6 +334,32 @@
                 <version>${jedis.version}</version>
             </dependency>
             <!-- 缓存框架REDIS:redis end -->
+
+            <!-- RSA加密工具 -->
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>	   <!-- Bouncy Castle用于 Java 平台的开放源码的轻量级密码术包，它支持大量的密码术算法。 -->
+                <version>${bcprov-jdk15on.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-codec</groupId>
+                <artifactId>commons-codec</artifactId>	   <!-- Commons codec是项目中用来处理常用的编码方法的工具类包,例如DES、SHA1、MD5、Base64、URL、Soundx等等. -->
+                <version>${commons-codec.version}</version>
+            </dependency>
+
+            <!-- util项目中用来处理Java基本对象方法的工具类包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!-- 验证码工具KAPTCHA:kaptcha -->
+            <dependency>
+                <groupId>com.github.penggle</groupId>
+                <artifactId>kaptcha</artifactId>
+                <version>${kaptcha.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

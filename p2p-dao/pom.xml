@@ -14,38 +14,21 @@
     <dependencies>
         <dependency>
             <groupId>com.vanguard</groupId>
-            <artifactId>p2p-util</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.vanguard</groupId>
             <artifactId>p2p-domain</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!-- 日志 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-        </dependency>
-        <!-- mybatis -->
+        <!-- MYBATIS 持久层框架 begin√ -->
         <dependency>
             <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
+            <artifactId>mybatis</artifactId>		  <!-- mybatis持久层框架 -->
         </dependency>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
         </dependency>
+        <!-- MYBATIS 持久层框架 end -->
+
         <!--mysql -->
         <dependency>
             <groupId>mysql</groupId>
@@ -62,10 +45,6 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>cglib</groupId>
-            <artifactId>cglib</artifactId>
         </dependency>
     </dependencies>
 
