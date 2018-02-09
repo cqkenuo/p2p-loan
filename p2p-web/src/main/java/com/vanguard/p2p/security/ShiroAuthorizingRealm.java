@@ -22,9 +22,7 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm {
 	
 	@Autowired
 	private IUserService userService;
-	@Autowired
-	private IEmailActiveService emailActiveService;
-	
+
 	/**
 	 * 认证回调函数, 登录时调用
 	 * Shiro登录认证(原理：用户提交 用户名和密码  --- shiro 封装令牌 ---- realm 通过用户名将密码查询返回 ---- shiro 自动去比较查询出密码和用户输入密码是否一致---- 进行登陆控制
@@ -38,7 +36,7 @@ public class ShiroAuthorizingRealm extends AuthorizingRealm {
 		
 		Member user = userService.getByUserName(token.getUsername());
 		
-		if (user == null || emailActiveService.getEmailIsActive(user.getId()).equals(StatusEnum.NONACTIVATED.getStatus())) {
+		if (user == null || userService.getEmailIsActive(user.getId()).equals(StatusEnum.NONACTIVATED.getStatus())) {
 			throw new UnknownAccountException();// 没找到帐号或者邮箱未被激活
 		}
 		

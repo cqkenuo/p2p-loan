@@ -5,6 +5,7 @@ import com.vanguard.p2p.base.domain.UserLoginLog;
 import com.vanguard.p2p.base.domain.User;
 import com.vanguard.p2p.base.vo.UserVO;
 import com.vanguard.p2p.exception.ValidateException;
+import com.vanguard.p2p.pojo.P2PResult;
 
 /**
  * @Descripe 管理员用户业务的接口类
@@ -23,7 +24,7 @@ public interface IUserService {
      * @throws ValidateException 验证异常
      * @return
      */
-    JsonResult insertUser(User user, String[] roleIds, String userName) throws ValidateException;
+    P2PResult insertUser(User user, String[] roleIds, String userName) throws ValidateException;
 
     /**
      * 根据管理员账号查找管理员
@@ -54,14 +55,14 @@ public interface IUserService {
      * @param userId 管理员ID
      * @param UserLoginLog 用户登录日志
      */
-    JsonResult updateLogById(Long userId, UserLoginLog UserLoginLog);
+    P2PResult updateLogById(Long userId, UserLoginLog UserLoginLog);
 
     /**
      * 更新管理员信息
      * @param user 管理员信息
      * @return
      */
-    JsonResult updateByUserId(User user);
+    P2PResult updateByUserId(User user);
 
     /**
      * 更新管理员信息
@@ -70,7 +71,7 @@ public interface IUserService {
      * @param userName 操作人
      * @return
      */
-    JsonResult updateUser(User user, String[] roleIds, String userName);
+    P2PResult updateUser(User user, String[] roleIds, String userName);
 
     /**
      * 更新管理员密码
@@ -80,14 +81,14 @@ public interface IUserService {
      * @param userName 管理员昵称
      * @return
      */
-    JsonResult updatePsw(String nowPassword, String newPassword, Long userId, String userName) throws ValidateException;
+    P2PResult updatePsw(String nowPassword, String newPassword, Long userId, String userName) throws ValidateException;
 
     /**
      * 更新管理员状态
      * @param userId 管理员ID
      * @return
      */
-    JsonResult updateStatus(Long userId);
+    P2PResult updateStatus(Long userId);
 
     /**
      * 更新管理员头像
@@ -95,12 +96,12 @@ public interface IUserService {
      * @param picImg 管理员头像
      * @return
      */
-    JsonResult updateAvatar(Long userId, String picImg);
+    P2PResult updateAvatar(Long userId, String picImg);
 
     /**
      * 根据管理员ID删除管理员,同时删除角色记录、登录日志
      * @param userId 管理员ID
      * @return
      */
-    JsonResult deleteByUserId(Long userId);
+    P2PResult deleteByUserId(Long userId);
 }
